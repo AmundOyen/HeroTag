@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.time {
+  height: 20px;
+  padding-inline: 16px;
+}
+
+.board {
+  background-color: #7CFC00;
+  height: calc(100vh - 52px);
+  width: calc(100vw - 32px);
+  margin: 16px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+
+  &.grass {
+    background-image: url('./assets/grass.png');
+  }
+}
+
+.character {
+  position: absolute;
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+}
+
+.hero {
+  background-color: #0059ff;
+  border: solid 2px #1c25a1;
+}
+
+.monster,
+.monster2 {
+  background-color: #FF4500;
+  border: solid 2px #b0441c;
+}
+
+img {
+  &.character {
+    height: 128px;
+    width: 128px;
+    background-color: transparent;
+    border: none;
+  }
+}

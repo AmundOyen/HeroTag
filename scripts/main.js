@@ -15,10 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
   Monster = document.querySelector('.monster');
   Monster2 = document.querySelector('.monster2');
 
-  Hero.style.top = Board.clientHeight / 2 - Hero.clientHeight / 2 + 'px';
-  Hero.style.left = Board.clientWidth / 2 - Hero.clientWidth / 2 + 'px';
-  Monster2.style.top = Board.clientHeight - Monster2.clientHeight + `px`;
-  Monster2.style.left = Board.clientWidth - Monster2.clientWidth + 'px';
+  initCharacters();
 
   setInterval(function () {
     if (Pause) { return; }
@@ -38,3 +35,12 @@ document.addEventListener('keydown', function (event) {
     Pause = !Pause;
   }
 });
+
+function initCharacters() {
+  Hero.style.top = Board.clientHeight / 2 - Hero.clientHeight / 2 + 'px';
+  Hero.style.left = Board.clientWidth / 2 - Hero.clientWidth / 2 + 'px';
+  Monster2.style.top = Board.clientHeight - Monster2.clientHeight + 'px';
+  Monster2.style.left = Board.clientWidth - Monster2.clientWidth + 'px';
+  Monster.style.top = '0px';
+  Monster.style.left = '0px';
+}

@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (Math.abs(heltenTop - newTop) < 10 && Math.abs(heltenLeft - newLeft) < 10) {
       alert('Game over!');
-      Monster.style.top = '0px';
-      Monster.style.left = '0px';
+      initCharacters();
       Pause = true;
     }
   }, 100);
